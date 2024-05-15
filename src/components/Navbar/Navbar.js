@@ -70,13 +70,13 @@ const Navbar = () => {
       </div>
         </Link>
         <ul className="hidden lg:flex space-x-5 ">
-        {/* <li className="hover:text-emerald-300 p-2">
+        <li className="hover:text-emerald-300 p-2">
             <Link href="/">Home</Link>
-          </li> */}
-          {/* <li className="hover:text-emerald-300 p-2">
-            <Link href="/CustomizedPrompts">Customized Prompts</Link>
           </li>
           <li className="hover:text-emerald-300 p-2">
+            <Link href="/More">More</Link>
+          </li>
+          {/* <li className="hover:text-emerald-300 p-2">
             {" "}
             <Link href="/FestivePosts">Festive Posts</Link>
           </li> */}
