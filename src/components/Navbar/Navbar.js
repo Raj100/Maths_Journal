@@ -70,16 +70,16 @@ const Navbar = () => {
       </div>
         </Link>
         <ul className="hidden lg:flex space-x-5 ">
-        <li className="hover:text-emerald-300 p-2">
+        {/* <li className="hover:text-emerald-300 p-2">
             <Link href="/">Home</Link>
-          </li>
-          <li className="hover:text-emerald-300 p-2">
+          </li> */}
+          {/* <li className="hover:text-emerald-300 p-2">
             <Link href="/CustomizedPrompts">Customized Prompts</Link>
           </li>
           <li className="hover:text-emerald-300 p-2">
             {" "}
             <Link href="/FestivePosts">Festive Posts</Link>
-          </li>
+          </li> */}
         </ul>
         <div className="hidden lg:flex items-center space-x-2 ">
           {userEmail ? (
@@ -162,7 +162,7 @@ const Navbar = () => {
           >
             <Link href="/">Home</Link>
           </li>
-          <li
+          {/* <li
             className={`hover:text-emerald-450 p-2  transition duration-[450ms] ${
               meuopen ? "" : "-translate-x-full"
             }`}
@@ -189,7 +189,7 @@ const Navbar = () => {
             <Link href="/Profile">
               <i class="fa-solid fa-user"></i> Profile
             </Link>
-          </li>
+          </li> */}
           <div className="hidden lg:block">
             {userEmail ? (
               <li
