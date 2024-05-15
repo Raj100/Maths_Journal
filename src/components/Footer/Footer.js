@@ -15,7 +15,7 @@ const Footer = () => {
                     <Image src="/logo.png" alt="logo2" width={100} height={100} />
                     <h1>Maths Visualiser</h1>
                 </div>
-                {/* <div  className='flex flex-col'>
+                <div  className='flex flex-col'>
                 <a href="/about">About</a>
                 <a href="/contact">Contact</a>
                 <a href="/privacy">Privacy Policy</a>
@@ -24,7 +24,7 @@ const Footer = () => {
                 <a href="/about">About</a>
                 <a href="/contact">Contact</a>
                 <a href="/privacy">Privacy Policy</a>
-                </div> */}
+                </div>
             </div>
 
         </footer>
