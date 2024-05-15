@@ -6,6 +6,7 @@ import Footer from "@/components/Footer/Footer";
 import { useState } from "react";
 import Cards from "@/components/Cards/Cards";
 import Link from "next/link";
+import Bisection from "@/components/Bisection/Bisection";
 
 export default function Home() {
   const [userEmail, setUserEmail] = useState(null);
@@ -35,6 +36,10 @@ export default function Home() {
          <Link href="FestivePosts"> <div className="p-2 bg-blue-500 text-white rounded-lg hover:bg-blue-900">Festive Posts</div></Link> 
         </div>
 
+        <div>
+          <Bisection></Bisection>
+        </div>
+
 
 
 {/* 
@@ -44,7 +49,7 @@ export default function Home() {
   <div class="relative w-80 h-52 bg-gray-300"></div>
 </div> */}
 
-<Cards></Cards>
+{/* <Cards></Cards> */}
 
 
         {/* <div>

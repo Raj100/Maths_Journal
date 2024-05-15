@@ -62,10 +62,10 @@ const Navbar = () => {
       >
         <Link href="/" className="font-concert-one text-xl lg:text-2xl">
         <div className='flex items-center'>
-        <Image src="/logo.png" width={75} height={75} />
+        {/* <Image src="/logo.png" width={75} height={75} /> */}
         <div >
-        <h1 className='font-bold'>Mar.it</h1>
-        <p className='text-xs'>AI Marketing Tool for your Business</p>
+        <h1 className=''>Mtahs Visulatizer</h1>
+        <p className='text-xs'>Visulaise Maths</p>
         </div>
       </div>
         </Link>
