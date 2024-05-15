@@ -1,4 +1,6 @@
 import React, { useState } from 'react';
+import { toast, ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 function BisectionMethod() {
     const [equation, setEquation] = useState('');
@@ -12,6 +14,11 @@ function BisectionMethod() {
     const handleSolve = () => {
         const aNum = parseFloat(a);
         const bNum = parseFloat(b);
+
+        if (isNaN(aNum) || isNaN(bNum) || equation.trim() === '') {
+            toast.error('Please enter valid equation and interval values.');
+            return;
+        }
 
         console.log("Equation:", equation);
         console.log("Initial Interval [a, b]:", [aNum, bNum]);
@@ -63,28 +70,31 @@ function BisectionMethod() {
 
     return (
         <div>
-            <h2>Bisection Method Solver</h2>
+                        <ToastContainer />
+            <div className=''>
+            <h1 className='text-2xl'>Bisection Method Solver</h1>
             <div>
                 <label>Equation:</label>
-                <input type="text" value={equation} onChange={e => setEquation(e.target.value)} />
+                <input className='border p-1 rounded-md m-2' type="text" value={equation} onChange={e => setEquation(e.target.value)} />
             </div>
             <div>
                 <label>Initial Interval [a, b]:</label>
-                <input type="text" value={a} onChange={e => setA(e.target.value)} /> to&nbsp;
-                <input type="text" value={b} onChange={e => setB(e.target.value)} />
+                <input className='border p-1 rounded-md m-2' type="text" value={a} onChange={e => setA(e.target.value)} /> to&nbsp;
+                <input className='border p-1 rounded-md m-2' type="text" value={b} onChange={e => setB(e.target.value)} />
             </div>
             <div>
                 <label>Tolerance:</label>
-                <input type="text" value={tolerance} onChange={e => setTolerance(parseFloat(e.target.value))} />
+                <input className='border p-1 rounded-md m-2' type="text" value={tolerance} onChange={e => setTolerance(parseFloat(e.target.value))} />
             </div>
             <div>
                 <label>Max Iterations:</label>
-                <input type="text" value={maxIterations} onChange={e => setMaxIterations(parseInt(e.target.value))} />
+                <input className='border p-1 rounded-md m-2' type="text" value={maxIterations} onChange={e => setMaxIterations(parseInt(e.target.value))} />
             </div>
-            <button onClick={handleSolve}>Solve</button>
+            </div>
+            <button className='p-2 bg-blue-500 text-white rounded-md' onClick={handleSolve}>Solve</button>
             {result !== null && (
                 <div>
-                    <h3>Result:</h3>
+                    <h3 className='tetx-center'>Results</h3>
                     <p>Approximate root: {result}</p>
                     <p>Value of the function at the root: {eval(equation.replace('^', '**').replace('x', result))}</p>
                 </div>

@@ -17,8 +17,7 @@ export default function Home() {
       <main className="flex min-h-screen flex-col items-center p-2 pt-20 lg:px-64 lg:pt-32">
         <div>
           {/* <Image src="/logo.png" width={200} height={200} /> */}
-          <h1 className="text-4xl font-bold">Welcome to Markit</h1>
-          <p className="text-lg">AI Marketing Tool for your Business</p>
+          <h1 className="text-4xl font-bold">Maths Analyser</h1>
         </div>
         <div className="flex gap-2 w-full justify-center">
           <input
@@ -33,7 +32,7 @@ export default function Home() {
         </div>
         <div className="flex gap-5 my-4">
          <Link href="CustomizedPrompts"><div className="p-2 bg-blue-500 text-white rounded-lg hover:bg-blue-900">Customised Prompt</div></Link> 
-         <Link href="FestivePosts"> <div className="p-2 bg-blue-500 text-white rounded-lg hover:bg-blue-900">Festive Posts</div></Link> 
+         <Link href="FestivePosts"> <div className="p-2 bg-blue-500 text-white rounded-lg hover:bg-blue-900">Maths Posts</div></Link> 
         </div>
 
         <div>
