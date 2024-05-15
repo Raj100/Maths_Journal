@@ -11,6 +11,11 @@ import Bisection from "@/components/Bisection/Bisection";
 export default function Home() {
   const [userEmail, setUserEmail] = useState(null);
   const [Prompt, setPrompt] = useState(null);
+  const [bisection,setBisection]=useState(false);
+  const [nR,setNR]=useState(false);
+  const closeAll=()=>{
+    setBisection(false);
+  }
   return (
     <>
       <Navbar></Navbar>
@@ -19,7 +24,7 @@ export default function Home() {
           {/* <Image src="/logo.png" width={200} height={200} /> */}
           <h1 className="text-4xl font-bold">Maths Analyser</h1>
         </div>
-        <div className="flex gap-2 w-full justify-center">
+        {/* <div className="flex gap-2 w-full justify-center">
           <input
             className="border p-3 lg:w-full shadow"
             type="text"
@@ -29,14 +34,17 @@ export default function Home() {
           <div className="bg-blue-500 p-2 w-10 rounded-lg flex items-center justify-center text-white">
             <i class="fa-solid fa-magnifying-glass"></i>
           </div>
-        </div>
+        </div> */}
         <div className="flex gap-5 my-4">
-         <Link href="CustomizedPrompts"><div className="p-2 bg-blue-500 text-white rounded-lg hover:bg-blue-900">Customised Prompt</div></Link> 
-         <Link href="FestivePosts"> <div className="p-2 bg-blue-500 text-white rounded-lg hover:bg-blue-900">Maths Posts</div></Link> 
+         {/* <Link href="CustomizedPrompts"><div className="p-2 bg-blue-500 text-white rounded-lg hover:bg-blue-900">Customised Prompt</div></Link> 
+         <Link href="FestivePosts"> <div className="p-2 bg-blue-500 text-white rounded-lg hover:bg-blue-900">Maths Posts</div></Link>  */}
+         <div onClick={()=>{closeAll();setBisection(true);}} className="p-2 bg-blue-500 text-white rounded-lg hover:bg-blue-900 cursor-pointer">Bisection Method</div>
+         <div onClick={()=>{closeAll();setNR(true);}} className="p-2 bg-blue-500 text-white rounded-lg hover:bg-blue-900 cursor-pointer">Newton Raphson Method</div>
         </div>
 
         <div>
-          <Bisection></Bisection>
+          {bisection &&  <Bisection></Bisection>}
+         
         </div>
 
 
