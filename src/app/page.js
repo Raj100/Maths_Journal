@@ -7,6 +7,7 @@ import { useState } from "react";
 import Cards from "@/components/Cards/Cards";
 import Link from "next/link";
 import Bisection from "@/components/Bisection/Bisection";
+import NewtonRaphson from "@/components/NewtonRaphson/NewtonRaphson";
 
 export default function Home() {
   const [userEmail, setUserEmail] = useState(null);
@@ -15,6 +16,7 @@ export default function Home() {
   const [nR,setNR]=useState(false);
   const closeAll=()=>{
     setBisection(false);
+    setNR(false);
   }
   return (
     <>
@@ -44,6 +46,7 @@ export default function Home() {
 
         <div>
           {bisection &&  <Bisection></Bisection>}
+          {nR && <NewtonRaphson/> }
          
         </div>
 

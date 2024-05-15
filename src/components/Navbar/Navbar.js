@@ -64,8 +64,8 @@ const Navbar = () => {
         <div className='flex items-center'>
         {/* <Image src="/logo.png" width={75} height={75} /> */}
         <div >
-        <h1 className=''>Mtahs Visulatizer</h1>
-        <p className='text-xs'>Visulaise Maths</p>
+        <h1 className=''>Maths Visualiser</h1>
+        {/* <p className='text-xs'>Visualiser Maths</p> */}
         </div>
       </div>
         </Link>
